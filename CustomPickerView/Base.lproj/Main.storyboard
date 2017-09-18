@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_2" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-Es-yXP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-sN-LJV">
+                                <rect key="frame" x="0.0" y="92" width="375" height="76"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFb-mG-McE" customClass="AKPickerView" customModule="CustomPickerView" customModuleProvider="target">
+                                        <rect key="frame" x="36" y="5" width="302" height="66"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwB-zq-eS8">
+                                        <rect key="frame" x="8" y="28" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="6I3-sf-Nr9"/>
+                                            <constraint firstAttribute="height" constant="20" id="fCq-Zh-mqb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="prevBT"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mum-lH-bFa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMm-2S-lZ4">
+                                        <rect key="frame" x="346" y="28" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Lkn-pk-pol"/>
+                                            <constraint firstAttribute="height" constant="20" id="eOO-uB-9Kz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="nextBT"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7i-0P-vwh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cMm-2S-lZ4" firstAttribute="leading" secondItem="CFb-mG-McE" secondAttribute="trailing" constant="8" id="9yf-3A-ZA5"/>
+                                    <constraint firstAttribute="height" constant="76" id="Btw-LE-ohz"/>
+                                    <constraint firstAttribute="bottom" secondItem="CFb-mG-McE" secondAttribute="bottom" constant="5" id="HcU-3A-Xbn"/>
+                                    <constraint firstItem="CFb-mG-McE" firstAttribute="top" secondItem="eRx-sN-LJV" secondAttribute="top" constant="5" id="IHh-Rn-Vp2"/>
+                                    <constraint firstItem="MwB-zq-eS8" firstAttribute="leading" secondItem="eRx-sN-LJV" secondAttribute="leading" constant="8" id="SBl-Uj-par"/>
+                                    <constraint firstItem="MwB-zq-eS8" firstAttribute="centerY" secondItem="eRx-sN-LJV" secondAttribute="centerY" id="SkK-j6-U9n"/>
+                                    <constraint firstAttribute="trailing" secondItem="cMm-2S-lZ4" secondAttribute="trailing" constant="9" id="XfH-Np-yKp"/>
+                                    <constraint firstItem="CFb-mG-McE" firstAttribute="leading" secondItem="MwB-zq-eS8" secondAttribute="trailing" constant="8" id="bG0-Td-YHp"/>
+                                    <constraint firstItem="cMm-2S-lZ4" firstAttribute="centerY" secondItem="eRx-sN-LJV" secondAttribute="centerY" id="hJZ-hz-fmv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jgb-Es-yXP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8DF-VR-nZM"/>
+                            <constraint firstItem="eRx-sN-LJV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lfj-m7-gqU"/>
+                            <constraint firstItem="eRx-sN-LJV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="PH0-G9-av9"/>
+                            <constraint firstItem="Jgb-Es-yXP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hCd-tX-9fF"/>
+                            <constraint firstAttribute="trailing" secondItem="Jgb-Es-yXP" secondAttribute="trailing" id="kXV-e6-2QE"/>
+                            <constraint firstAttribute="trailing" secondItem="eRx-sN-LJV" secondAttribute="trailing" id="w4R-WP-jzh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jgb-Es-yXP" secondAttribute="bottom" id="znm-EB-4Ma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBT" destination="MwB-zq-eS8" id="myV-0q-1U3"/>
+                        <outlet property="customPickerview" destination="CFb-mG-McE" id="Yn2-9Z-0zp"/>
+                        <outlet property="nextButton" destination="cMm-2S-lZ4" id="gyw-Ls-sX6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="country_2" width="349" height="620"/>
+        <image name="nextBT" width="128" height="128"/>
+        <image name="prevBT" width="128" height="128"/>
+    </resources>
+</document>
